@@ -50,7 +50,7 @@ function sum() {
     let c = 3; // let ile tanımlama yapıldığı değişkenin kendisi block scoped'dur. Bu sebeple block dışında değeri okunamaz.
   }
 
-
+  // neden var kullanılmamalıdır:
   // b = 'sacma sapan bir sekilde manipule edebilirim ve bu cok tehlikeli'
 
   console.log(a + b /* + c // bu yapılamaz */); // 3
@@ -193,7 +193,7 @@ let user = {
 
 // Functions
 // Diğer backend dillerinden ayıran özellikler:
-// 1. access modifiers (public, private, protected) gerekli değildir
+// 1. access modifiers (public, private, protected) yoktur
 // 2. parametrelerin tipleri belirtilmez
 // 3. return tipi de belirtilmez
 function sum(a, b) {
