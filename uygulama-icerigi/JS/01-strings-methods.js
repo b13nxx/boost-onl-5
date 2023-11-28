@@ -13,7 +13,9 @@
 // .toLowerCase
 
 // -- Birkaç cümleden oluşan bir metin yazıp myStory isimli bir değişkene atayalım. İçerisinde tekrar eden birkaç kelime bulunsun.
+let myStory="Cem"
 // 1- Yazdığınız hikayenin uzunluğunu yazdırın.
+console.log(myStory.length);
 // 2- Hikayenin toplam index sayısı kaçtır.
 // 3- string içerisinde tekrar eden bir kelimenin ilkinin indexini ve sonuncusunun indexini sorgulayın.
 // 4- İlk 15 karakterini yazdırın. ( 2 farklı yöntem kullanarak)
