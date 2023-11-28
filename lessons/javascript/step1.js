@@ -1,4 +1,5 @@
-// FUNCTIONAL PROGRAMMING
+// "JavaScript'te OOP değil fonksiyonel programlama (functional programming) yapılır"
+// "JavaScript'te memory tarafında (hafızada) her şey bir objeye indirgenir"
 
 // Functional programming'de her şey bir fonksiyon içerisindedir.
 function main() {
@@ -41,7 +42,7 @@ numbers = [1, 2, 3, 4, 5, 6]; // TypeError: Assignment to constant variable.
 // var ile tanımlanan değişkenler function scoped'dur.
 // let ile tanımlanan değişkenler block scoped'dur.
 
-// sektor standardı / best practice: let kullanulması yönündedir.
+// sektor standardı / best practice: let kullanılması yönündedir.
 function sum() {
   var a = 1;
 
@@ -126,7 +127,7 @@ if (isPlayer) {
 
 let color = 'red'
 
-// waterfall effec (şelale etkisi)
+// waterfall effect (şelale etkisi)
 switch (color) {
   case 'red':
     // ...
