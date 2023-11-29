@@ -112,6 +112,12 @@ console.log(`Kargo bedeli: ${total > 100 ? '0.00' : '30.00'} TL`)
 // Named function (isimlendirilmiş fonksiyon)
 // Function Declaration
 function calcSum(firstNum, secondNum) {
+  this.text = 'Hello' // fonksiyonun kendisine property set edilmesi
+
+  // adeta objeye bir property set etmek gibi
+  const obj = {}
+  obj.text = 'Hello'
+
   return firstNum + secondNum
 }
 
@@ -187,6 +193,17 @@ const counter1 = createCounter()
 
 counter1()
 
+// Object'ler
+
+const person = {
+  name: 'John',
+  age: 30,
+  country: 'Turkey'
+}
+
+console.log(person.name) // John
+console.log(person['name']) // John
+
 
 // Loops
 
@@ -196,18 +213,54 @@ const personalTraits = [
   'love', // sevgi
   'empathy', // empati
 ]
-const person = {
-  name: 'John',
-  age: 30,
-  country: 'Turkey'
-}
+
+let personalTrait = 'passion'
 
 // For
 
+for (let i = 0; i < personalTraits.length; i++) {
+  console.log(personalTraits[i])
+}
+
+let keys = Object.keys(person)
+for (let i = 0; i < keys.length; i++) {
+  console.log(person[keys[i]])
+}
 
 
 // For Of
 
+// Dizilerin elemanları üzerinde dolaşmak (iterate etmek) için kullanlur
+// Best practice: Current item değişkeninin isimlendirmesini yaparken o dizinin
+// single elemanına nasıl bir isim verebilecek isek onu vermeliyiz
+for (let personalTrait of personalTraits) {
+  console.log(personalTrait)
+}
 
 
 // For In
+
+// Object'lerin property'leri üzerinde dolaşmak (iterate etmek) için kullanılır
+for (let key in person) {
+  console.log(person[key])
+}
+
+// While
+
+// Koşula bakılarak döngü çalıştırılacaktır
+
+while (personalTrait == 'love') {
+  console.log(personalTrait)
+
+  personalTrait = personalTraits[Math.floor(Math.random() * personalTraits.length)]
+}
+
+// Do While
+
+// Koşula bakılmaksızın en az bir defa döngü çalıştırılacaktır
+
+do {
+  console.log(personalTrait)
+
+  personalTrait = personalTraits[Math.floor(Math.random() * personalTraits.length)]
+} while (personalTrait !== 'love')
