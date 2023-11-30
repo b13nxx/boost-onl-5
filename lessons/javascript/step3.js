@@ -116,7 +116,7 @@ console.log(num2) // 2
 console.log(num3) // 3
 console.log(rest) // [4, 5]
 
-const person = { 
+const data = { 
   name: 'John',
   age: 25,
   address: {
@@ -134,28 +134,46 @@ console.log(age) // 25
 console.log(city) // Istanbul
 console.log(country) // Turkey
 
-// ÖDEV:
 
-const otherPerson = {
+const otherData = {
   name: 'Jane',
-  age: 30,
   address: {
     city: 'Ankara',
     country: 'Turkey'
-  }
+  },
+  job: 'Software Engineer'
 }
 
 const otherNums = [6, 7, 8, 9, 10]
 
 const [num1 ,, num3, ...rest] = nums
 
-
+// Obje merge işleminde eğer aynı property'ler var ise override (üzerine yazma) yapılacaktır
+// Spread ile objeleri merge edebiliriz:
 const combinedObj = {
-  ...person,
-  ...otherPerson
+  ...data,
+  ...otherData
 }
 
+// Object.assign ile objeler merge edilebilir (eski yöntem)
+Object.assign({}, data, otherData)
+
+// Array'lerde ise herhangi bir override ihtimali yoktur
+// Spread ile array'leri merge edebiliriz:
 const combinedArr = [
   ...nums,
   ...otherNums
 ]
+
+// concat metodu ile de birleştirme yapılabilir (eski yöntem)
+nums.concat(otherNums) // eski yöntem
+
+// fonksiyonlar çağırılırken illa bütün parametreler gönderilmek zorunda değildir
+// ama bu durumun hataya sebep vermesi de mümükündür
+var numbers = [5, 7]
+
+function calcSum(firstNum, secondNum, thirdNum) {
+    return firstNum + secondNum + thirdNum
+}
+
+calcSum(...numbers) // NaN
