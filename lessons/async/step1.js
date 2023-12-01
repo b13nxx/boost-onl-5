@@ -40,7 +40,6 @@ setTimeout(() => {
 console.log('World')
 
 
-
 // Callback gerektirecek işlemler ne olabilir:
 // 1. Dosya okuma / yazma işlemleri
 // 2. API istekleri
