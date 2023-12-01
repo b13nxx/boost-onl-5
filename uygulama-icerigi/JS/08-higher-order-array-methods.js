@@ -36,3 +36,18 @@
 // 8- Verilen bir stringin her bir kelimesini ters çevirerek yeni bir dizi oluşturan bir map döngüsü oluşturun.
 // 9- Verilen bir dizinin elemanlarını(elemanlar sayı olmalı) stringe çevirerek yeni bir dizi oluşturan bir map döngüsü oluşturun.
 // 10- Verilen bir dizi içindeki stringleri ters çevirerek yeni bir dizi oluşturan bir map döngüsü oluşturun. Ancak, bu sefer reverse() yerine kendi ters çevirme algoritmanızı oluşturun.
+
+// ---------------filter-------------------
+// 11- Verilen bir dizi içerisindeki çift sayıları filtreleyen bir örnek yazın.
+// 12- Verilen bir dizi içerisindeki stringlerden belirli bir uzunluğa sahip olanları filtreleyen bir örnek yazın.
+// ---------------reduce-------------------
+// 13- Verilen bir dizi içerisindeki sayıların toplamını, her bir sayıya 2 ekleyerek hesaplayan bir örnek yazın.
+// ---------------find-------------------
+// 14- Verilen bir dizi içerisindeki ilk çift sayıyı döndüren bir örnek
+// 15- Verilen bir dizi içerisindeki son çift sayıyı döndüren bir örnek
+// ---------------some-------------------
+// 16- Verilen bir dizi içerisinde en az bir negatif sayı olup olmadığını kontrol eden bir örnek
+// ---------------every-------------------
+// 17- Verilen bir dizi içerisindeki tüm sayıların pozitif olduğunu kontrol eden bir örnek
+// ---------------sort-------------------
+// 18- Verilen bir dizi içerisindeki sayıları sıralayan bir örnek
