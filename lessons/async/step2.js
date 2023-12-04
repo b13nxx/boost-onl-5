@@ -1,3 +1,5 @@
+import fs from 'fs' // native (builtin) node'un file system modülü
+
 // Callback Hell
 
 // Callback Hell Example
@@ -239,3 +241,17 @@ Promise.all([promise1, promise2]).then((data) => {
 }).catch((error) => {
   console.log(error)
 })
+
+
+// Fetch
+
+fetch('https://jsonplaceholder.typicode.com/todos/1')
+  .then(response => {
+    return response.json() // .json metodu da aynı fetch gibi bir promise'dır
+  })
+  .then(data => {
+    console.log(data)
+  })
+  .catch(error => { // error handling
+    console.log(error)
+  })

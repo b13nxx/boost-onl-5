@@ -82,7 +82,8 @@ let xhr = new XMLHttpRequest()
 
 xhr.addEventListener('readystatechange', () => {
   if (xhr.readyState === 4) {
-    console.log(xhr.responseText)
+    const jsonData = JSON.parse(xhr.responseText)
+    console.log('jsonData', jsonData)
   }
 })
 

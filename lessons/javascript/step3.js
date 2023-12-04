@@ -22,6 +22,9 @@ function outerFunc() {
   }
 }
 
+// Fonksiyonda eğer tek satırlık return var ise, süslü parantezlerden kurtararak daha kısa yazabiliriz:
+const multipleNums = (firstNum, lastNum) => firstNum * lastNum
+
 
 // IIFE (Immediately Invoked Function Expression)
 
