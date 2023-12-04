@@ -146,4 +146,57 @@ const aracBilgileri = {
 
 // student isimli bir nesne oluşturun ve içerisine 3 adet özellik ekleyin. Nesnenin özelliklerini `for...in` döngüsüyle dolaşan ve konsola yazdıran bir fonksiyon yazın.
 
+const student = {
+    name: "Cem Mert Şimşek",
+    age: 20,
+    gender: "Erkek",
+  };
+  
+  const ozellikYazdır = (nesne) => {
+    for (let key in nesne) {
+      if (nesne.hasOwnProperty(key)) {
+        console.log(key + ": " + nesne[key]);
+      }
+    }
+  };
+  ozellikYazdır(student);
+
 // İçerisinde 3 adet öğrenci nesnesi bulunan bir dizi oluşturun. her nesnenin kendisine ait isim ve not özellikleri bulunsun.(örn. {name: "Cem", grades: [80, 90, 50]}) Öğrencilerin ortalama notlarını `for...of` döngüsü kullanarak hesaplayın ve dersten geçip geçmedikleri bilgisini isimleriyle birlikte konsola yazdırın. (Geçer not 60)
+
+const students = [
+    {
+      name: "Cem Mert",
+      grades: [80, 85, 90],
+    },
+    {
+      name: "Atakan Bektaş",
+      grades: [70, 65, 75],
+    },
+    {
+      name: "Burak Özgür",
+      grades: [90, 95, 92],
+    },
+  ];
+  
+  const basariDurumu = (students) => {
+    const gecerNot = 60;
+  
+    for (let student of students) {
+      let total = 0;
+  
+      for (let grade of student.grades) {
+        total += grade;
+      }
+  
+      const average = total / student.grades.length;
+  
+      if (average >= gecerNot) {
+        console.log(student.name + " başarılı bir öğrenci.");
+      } else {
+        console.log(student.name + " başarısız bir öğrenci.");
+      }
+    }
+  };
+  
+  basariDurumu(students);
+  
