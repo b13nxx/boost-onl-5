@@ -31,11 +31,28 @@ console.log(newObject2);
 
 
 // 5- nesnenizin anahtarlarını konsola yazdırın.
+console.log(Object.keys(myObject));
 // 6- nesnenizin değerlerini konsola yazdırın.
+console.log(Object.values(myObject));
 // 7- nesnenizin tüm anahtar-değer çiftlerini konsola yazdırın.
+console.log(Object.entries(myObject));
+
 // 8- nesnenizin içerisinde isim anahtarına sahip bir özellik var mı diye kontrol edin
+console.log(myObject.hasOwnProperty("isim"));
+
 // 9- nesnenizin özelliklerine değişiklik ve ekleme çıkarma yapılabilmesini engelleyin.
+Object.freeze(myObject);
+myObject.sevdigiRenk = "Mor";
+myObject.isim = "Cem";
+delete myObject.isim;
+console.log(myObject);
+
 // 10- nesnenizin özelliklerinde değişiklik yapılabilsin ancak ekleme çıkarma yapılabilmesini engelleyin.
+Object.seal(copyOfMyObject);
+copyOfMyObject.sevdigiRenk = "Mor";
+copyOfMyObject.isim = "Cem";
+delete copyOfMyObject.isim;
+console.log(copyOfMyObject);
 
 // aşağıda verilen aracBilgileri nesnesi içerisinde bulunan her bir servis kayıdına ait tarih bilgisi ve ilgili servis kayıdına ait detay kısmında bulunan aciklama ve ucret bilgilerini konsola yazdırın.
 /*(örn çıktı: 
@@ -127,3 +144,6 @@ const aracBilgileri = {
     ],
   };
 
+// student isimli bir nesne oluşturun ve içerisine 3 adet özellik ekleyin. Nesnenin özelliklerini `for...in` döngüsüyle dolaşan ve konsola yazdıran bir fonksiyon yazın.
+
+// İçerisinde 3 adet öğrenci nesnesi bulunan bir dizi oluşturun. her nesnenin kendisine ait isim ve not özellikleri bulunsun.(örn. {name: "Cem", grades: [80, 90, 50]}) Öğrencilerin ortalama notlarını `for...of` döngüsü kullanarak hesaplayın ve dersten geçip geçmedikleri bilgisini isimleriyle birlikte konsola yazdırın. (Geçer not 60)
