@@ -7,7 +7,7 @@ import { HelloMessage } from "./components/HelloMessage/HelloMessage.jsx";
 
 // Aynı objeleri yıkmadaki syntax ile birebirdir dıyebiliriz:
 const person = {
-  name: "Ali Furkan",
+  name: "Mehmet",
   age: 22,
 }
 const { surname } = person
