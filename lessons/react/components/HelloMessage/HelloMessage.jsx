@@ -1,12 +1,11 @@
-// Varsayılan olarak export edilen sadece 1 tane olabilir:
 const countries = [
   { name: 'USA', capital: 'Washington DC' },
   { name: 'Germany', capital: 'Berlin' },
   { name: 'Turkey', capital: 'Ankara' }
 ]
 
+// Varsayılan olarak export edilen sadece 1 tane olabilir:
 export default countries
-
 export /* default */ const languages = [
   { name: 'English', code: 'en' },
   { name: 'German', code: 'de' },
