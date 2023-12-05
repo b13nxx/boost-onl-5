@@ -48,3 +48,15 @@ get(`${jsonPlaceHolderURL}/1`, (err, data) => {
         console.log(data);
     }
 })
+
+xhr.setRequestHeader("Content-Type", "application/json")
+
+const postData = {
+    name: "cem",
+    email: "sdfs",
+    body: "lorem"
+}
+
+send(JSON.stringify(postData))
+
+// XHR ile birer adet get, post, put, patch ve delete isteklerini atan birer fonksiyon yazınız.
