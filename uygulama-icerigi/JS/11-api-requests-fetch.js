@@ -5,9 +5,8 @@ let commentsThen;
 const getAllCommentsThen = () => {
     return fetch("https://jsonplaceholder.typicode.com/comments")
     .then(res=> res.json())
-    .then(data => commentsThen = data)
 }
-
-getAllCommentsThen().then(res => console.log(commentsThen))
+getAllCommentsThen().then(res => console.log(res))
 
 // FETCH ile getCommentById, deleteComment, putComment, patchComment, postComment
+
