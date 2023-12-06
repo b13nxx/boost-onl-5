@@ -88,24 +88,41 @@ const getRequest = (endpoint) => {
 
 // FETCH
 
-fetch(`${jsonPlaceHolderURL}/2`)
-  .then((res) => {
-    console.log(res);
-    return res.json();
-  })
-  .then((data) => console.log(data));
+// fetch(`${jsonPlaceHolderURL}/2`)
+//   .then((res) => {
+//     console.log(res);
+//     return res.json();
+//   })
+//   .then((data) => console.log(data));
 
-const newComment = {
-    name:"Lorem",
-    email: "example@gmail.com",
-    body: "lorem ipsum dolor sit amet non elit"
+// const newComment = {
+//     name:"Lorem",
+//     email: "example@gmail.com",
+//     body: "lorem ipsum dolor sit amet non elit"
+// }
+
+// fetch(`${jsonPlaceHolderURL}`, {
+//     method: "POST",
+//     headers: {"Content-Type": "application/json"},
+//     body: JSON.stringify(newComment)
+// }).then(res => {
+//     console.log(res.status);
+//     return res.json()
+// }).then(data => console.log(data))
+
+const getAllComments = async () => {
+  console.log("inner 1");
+  console.log("inner 2");
+  const res = await fetch(jsonPlaceHolderURL)
+  const data = await res.json()
+  console.log("inner 3");
+  console.log("inner 4");
+  return data
 }
 
-fetch(`${jsonPlaceHolderURL}`, {
-    method: "POST",
-    headers: {"Content-Type": "application/json"},
-    body: JSON.stringify(newComment)
-}).then(res => {
-    console.log(res.status);
-    return res.json()
-}).then(data => console.log(data))
+
+console.log("outer 1");
+console.log("outer 2");
+getAllComments().then(data => console.log(data))
+console.log("outer 3");
+console.log("outer 4");
