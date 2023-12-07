@@ -17,5 +17,5 @@ export function HelloMessage() {
 
   // React componentlerinde render edilecek parça JSX ile yazılır ve return edilir
   // JSX, HTML ile benzer özellikler gösterse de HTML değildir
-  return <h1>Bu bir hello message'dir</h1>;
+  return <h1>Bu bir hello message'dir</h1>
 }
