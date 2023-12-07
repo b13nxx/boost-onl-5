@@ -4,10 +4,11 @@ import DefaultExportEdilenImportEdildigiIcinIstedigimIsmiVerebilirim from "./com
 
 // Süslü parantezlerin içerisindeki yapıları isimlendirmenin doğru olması şartıyla,
 // ilgili dosyanın içerisinden import edecektir:
-import { HelloMessage } from "./components/HelloMessage/HelloMessage.jsx";
+import { HelloMessage } from "./components/HelloMessage/HelloMessage.jsx"
 
 
-import { Counter } from "./components/Counter/Counter.jsx";
+import { Counter } from "./components/Counter/Counter.jsx"
+import { CommentList } from "./components/CommentList/CommentList.jsx"
 
 // Aynı objeleri yıkmadaki syntax ile birebirdir dıyebiliriz:
 const person = {
@@ -24,5 +25,8 @@ export function App() {
   return <div>
     <HelloMessage />
     <Counter /* JSX Contexti */ initialCounterValue={ /* JS Contexti */ getInitialValue()} isDisabled={false} />
+    <br />
+    <h1>Yorumlar</h1>
+    <CommentList />
   </div>
 }
