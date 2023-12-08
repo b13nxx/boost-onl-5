@@ -15,6 +15,6 @@ export function Comments () {
 
   return <div>
     <CommentBox addComment={handleAddComment} />
-    <CommentList />
+    <CommentList comments={comments} />
   </div>
 }

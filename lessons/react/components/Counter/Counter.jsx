@@ -1,5 +1,7 @@
 import { useState } from 'react'
 
+import styles from "./Counter.module.css"
+
 // Componentler aşağıdaki durumlarda sayfa içerisinde tekrar render olurlar:
 // 1. Componentin sahip olduğu Props'lardan biri değiştiğinde
 // 2. Componentin sahip olduğu State'lerden biri değiştiğinde
@@ -18,6 +20,6 @@ export function Counter({ initialCounterValue, isDisabled }) {
   return <div>
     <p>Sayac: {counterValue}</p>
     <p>Disabled: {isDisabled ? 'true' : 'false'}</p>
-    <button onClick={handleIncreaseCounter}>Increase</button>
+    <button class={styles.button} onClick={handleIncreaseCounter}>Increase</button>
   </div>
 }

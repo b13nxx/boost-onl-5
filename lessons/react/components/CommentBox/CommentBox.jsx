@@ -1,16 +1,22 @@
 import { useState } from 'react'
 
-export function CommentBox () {
+import styles from "./CommentBox.module.css"
+
+export function CommentBox ({ addComment }) {
   const [commentText, setCommentText] = useState('')
 
   const handleTexteareValueChange = (event) => {
     setCommentText(event.target.value)
   }
 
+  const handleAddComment = () => {
+    addComment(commentText)
+  }
+
   return <div>
     <textarea id="mytexteare" onChange={handleTexteareValueChange} />
     <br />
     <br />
-    <button onClick={handleAddComment}>Ekle</button>
+    <button class={styles.button} onClick={handleAddComment}>Ekle</button>
   </div>
 }

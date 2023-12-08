@@ -1,4 +1,4 @@
-export function CommentList () {
+export function CommentList ({ comments }) {
   return <div>
     <ul>
       <li>Yorum 1</li>
