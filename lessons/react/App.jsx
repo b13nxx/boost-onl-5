@@ -8,7 +8,7 @@ import { HelloMessage } from "./components/HelloMessage/HelloMessage.jsx"
 
 
 import { Counter } from "./components/Counter/Counter.jsx"
-import { CommentList } from "./components/CommentList/CommentList.jsx"
+import { Comments } from "./components/Comments/Comments.jsx"
 
 // Aynı objeleri yıkmadaki syntax ile birebirdir dıyebiliriz:
 const person = {
@@ -27,6 +27,6 @@ export function App() {
     <Counter /* JSX Contexti */ initialCounterValue={ /* JS Contexti */ getInitialValue()} isDisabled={false} />
     <br />
     <h1>Yorumlar</h1>
-    <CommentList />
+    <Comments />
   </div>
 }
