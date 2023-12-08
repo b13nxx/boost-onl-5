@@ -1,6 +1,7 @@
 import "./App.css";
 import Header from "./components/Header";
 import Home from "./components/Home";
+import NewRecipeForm from "./components/NewRecipeForm";
 import RecipeList from "./components/RecipeList";
 
 function App() {
@@ -91,6 +92,7 @@ function App() {
     <>
       <Header />
       <Home />
+      <NewRecipeForm/>
       <RecipeList  recipes={fakeRecipes}  />
     </>
   );
