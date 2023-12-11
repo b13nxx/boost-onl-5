@@ -17,6 +17,6 @@ export function CommentBox ({ addComment }) {
     <textarea id="mytexteare" onChange={handleTexteareValueChange} />
     <br />
     <br />
-    <button class={styles.button} onClick={handleAddComment}>Ekle</button>
+    <button className={styles.button} onClick={handleAddComment}>Ekle</button>
   </div>
 }

@@ -9,6 +9,7 @@ import { HelloMessage } from "./components/HelloMessage/HelloMessage.jsx"
 
 import { Counter } from "./components/Counter/Counter.jsx"
 import { Comments } from "./components/Comments/Comments.jsx"
+import { JokeList } from "./components/JokeList/JokeList.jsx";
 
 // Aynı objeleri yıkmadaki syntax ile birebirdir dıyebiliriz:
 const person = {
@@ -28,5 +29,8 @@ export function App() {
     <br />
     <h1>Yorumlar</h1>
     <Comments />
+    <br />
+    <h1>Şakalar</h1>
+    <JokeList />
   </div>
 }

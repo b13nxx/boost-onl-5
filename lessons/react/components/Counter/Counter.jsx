@@ -20,6 +20,6 @@ export function Counter({ initialCounterValue, isDisabled }) {
   return <div>
     <p>Sayac: {counterValue}</p>
     <p>Disabled: {isDisabled ? 'true' : 'false'}</p>
-    <button class={styles.button} onClick={handleIncreaseCounter}>Increase</button>
+    <button className={styles.button} onClick={handleIncreaseCounter}>Increase</button>
   </div>
 }
