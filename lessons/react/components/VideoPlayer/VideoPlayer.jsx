@@ -1,18 +1,24 @@
-import { useState, useRef } from "react"
+import { useState, useRef, useEffect } from "react"
 
 import styles from "./VideoPlayer.module.css"
 
 export function VideoPlayer () {
-  const [isPlaying, setIsPlaying] = useState(true)
+  const [isPlaying, setIsPlaying] = useState(false)
   const videoRef = useRef(null)
-  
-  const buttonClicked= () =>{
-    if(isPlaying) {
-      setIsPlaying(false)
+
+  useEffect(() => {
+    if (!isPlaying) {
       videoRef.current.pause()
     } else {
-      setIsPlaying(true)
       videoRef.current.play()
+    }
+  }, [isPlaying])
+
+  const handlePlayButtonClick = () =>{
+    if (isPlaying) {
+      setIsPlaying(false)
+    } else {
+      setIsPlaying(true)
     }
   }
 
@@ -23,7 +29,7 @@ export function VideoPlayer () {
         <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <button class={styles['video-button']} onClick={buttonClicked}>{isPlaying ? "Durdur": "Başlat"}</button>
+      <button class={styles['video-button']} onClick={handlePlayButtonClick}>{isPlaying ? "Durdur": "Başlat"}</button>
     </div>
     <br />
     <br />

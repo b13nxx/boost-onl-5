@@ -7,10 +7,14 @@ import DefaultExportEdilenImportEdildigiIcinIstedigimIsmiVerebilirim from "./com
 import { HelloMessage } from "./components/HelloMessage/HelloMessage.jsx"
 
 
-import { Counter } from "./components/Counter/Counter.jsx"
-import { Comments } from "./components/Comments/Comments.jsx"
-import { JokeList } from "./components/JokeList/JokeList.jsx";
-import { VideoPlayer } from "./components/VideoPlayer/VideoPlayer.jsx";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import { NavBar } from "./components/NavBar/NavBar.jsx"
+import { HomePage } from "./pages/HomePage/HomePage.jsx"
+import { CounterPage } from "./pages/CounterPage/CounterPage.jsx"
+import { JokesPage } from "./pages/JokesPage/JokesPage.jsx"
+import { VideoPlayerPage } from "./pages/VideoPlayerPage/VideoPlayerPage.jsx"
 
 // Aynı objeleri yıkmadaki syntax ile birebirdir dıyebiliriz:
 const person = {
@@ -20,21 +24,15 @@ const person = {
 const { surname } = person
 
 export function App() {
-  const getInitialValue = () => 5
-
-  // JSX içerisinde herhangi bir componente data yollamak istiyorsak
-  // Aynı HTML tarafında attribute yazar gibi gerçekleştirmemiz gerekiyor
   return <div>
-    <HelloMessage />
-    <Counter /* JSX Contexti */ initialCounterValue={ /* JS Contexti */ getInitialValue()} isDisabled={false} />
-    <br />
-    <h1>Yorumlar</h1>
-    <Comments />
-    <br />
-    <h1>Şakalar</h1>
-    <JokeList />
-    <br />
-    <h1>Video Oynatıcı</h1>
-    <VideoPlayer />
+    <NavBar />
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<HomePage />} />
+        <Route path="counter" element={<CounterPage />} />
+        <Route path="jokes" element={<JokesPage />} />
+        <Route path="video" element={<VideoPlayerPage />} />
+      </Routes>
+    </BrowserRouter>
   </div>
 }

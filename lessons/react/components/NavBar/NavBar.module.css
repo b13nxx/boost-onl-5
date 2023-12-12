@@ -1,0 +1,17 @@
+.navbar > ul {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  list-style: none;
+
+  font-size: 24px;
+}
+
+.navbar > ul > li > a {
+  padding: 10px;
+  text-decoration: none;
+}
+
+.navbar > ul > li > a:hover {
+  border: 1px solid #000;
+}
