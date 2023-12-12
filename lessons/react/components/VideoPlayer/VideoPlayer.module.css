@@ -1,0 +1,10 @@
+.video-wrapper {
+ position: relative;
+ display: inline-block;
+}
+
+.video-button {
+  right: 10px;
+  bottom: 10px;
+  position: absolute;
+}

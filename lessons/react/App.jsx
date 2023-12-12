@@ -10,6 +10,7 @@ import { HelloMessage } from "./components/HelloMessage/HelloMessage.jsx"
 import { Counter } from "./components/Counter/Counter.jsx"
 import { Comments } from "./components/Comments/Comments.jsx"
 import { JokeList } from "./components/JokeList/JokeList.jsx";
+import { VideoPlayer } from "./components/VideoPlayer/VideoPlayer.jsx";
 
 // Aynı objeleri yıkmadaki syntax ile birebirdir dıyebiliriz:
 const person = {
@@ -32,5 +33,8 @@ export function App() {
     <br />
     <h1>Şakalar</h1>
     <JokeList />
+    <br />
+    <h1>Video Oynatıcı</h1>
+    <VideoPlayer />
   </div>
 }
