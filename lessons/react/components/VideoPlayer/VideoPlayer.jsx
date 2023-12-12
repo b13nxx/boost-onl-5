@@ -8,7 +8,7 @@ export function VideoPlayer () {
 
   useEffect(() => {
     if (!isPlaying) {
-      videoRef.current.pause()
+      videoRef.current.pause() // Bu bir yan etkidir
     } else {
       videoRef.current.play()
     }
