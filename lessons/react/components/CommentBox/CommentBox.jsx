@@ -5,7 +5,7 @@ import styles from "./CommentBox.module.css"
 export function CommentBox ({ addComment }) {
   const [commentText, setCommentText] = useState('')
 
-  const handleTexteareValueChange = (event) => {
+  const handleTexteareaValueChange = (event) => {
     setCommentText(event.target.value)
   }
 
@@ -14,7 +14,7 @@ export function CommentBox ({ addComment }) {
   }
 
   return <div>
-    <textarea id="mytexteare" onChange={handleTexteareValueChange} />
+    <textarea id="mytexteare" onChange={handleTexteareaValueChange} />
     <br />
     <br />
     <button className={styles.button} onClick={handleAddComment}>Ekle</button>
