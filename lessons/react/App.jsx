@@ -7,6 +7,14 @@ import DefaultExportEdilenImportEdildigiIcinIstedigimIsmiVerebilirim from "./com
 import { HelloMessage } from "./components/HelloMessage/HelloMessage.jsx"
 
 
+// Aynı objeleri yıkmadaki syntax ile birebirdir dıyebiliriz:
+/*
+const person = {
+  name: "Mehmet",
+  age: 22,
+}
+const { surname } = person
+*/
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -15,13 +23,6 @@ import { HomePage } from "./pages/HomePage/HomePage.jsx"
 import { CounterPage } from "./pages/CounterPage/CounterPage.jsx"
 import { JokesPage } from "./pages/JokesPage/JokesPage.jsx"
 import { VideoPlayerPage } from "./pages/VideoPlayerPage/VideoPlayerPage.jsx"
-
-// Aynı objeleri yıkmadaki syntax ile birebirdir dıyebiliriz:
-const person = {
-  name: "Mehmet",
-  age: 22,
-}
-const { surname } = person
 
 export function App() {
   return <div>
