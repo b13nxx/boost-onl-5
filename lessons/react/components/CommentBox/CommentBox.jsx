@@ -1,8 +1,8 @@
-import { useState } from 'react'
+import { useState, memo } from 'react'
 
 import styles from "./CommentBox.module.css"
 
-export function CommentBox ({ addComment }) {
+const CommentBox = memo(({ addComment }) => {
   const [commentText, setCommentText] = useState('')
 
   const handleTexteareaValueChange = (event) => {
@@ -19,4 +19,6 @@ export function CommentBox ({ addComment }) {
     <br />
     <button className={styles.button} onClick={handleAddComment}>Ekle</button>
   </div>
-}
+})
+
+export { CommentBox }

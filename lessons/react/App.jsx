@@ -21,8 +21,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { NavBar } from "./components/NavBar/NavBar.jsx"
 import { HomePage } from "./pages/HomePage/HomePage.jsx"
 import { CounterPage } from "./pages/CounterPage/CounterPage.jsx"
+import { CommentsPage } from "./pages/CommentsPage/CommentsPage.jsx"
 import { JokesPage } from "./pages/JokesPage/JokesPage.jsx"
 import { VideoPlayerPage } from "./pages/VideoPlayerPage/VideoPlayerPage.jsx"
+import { FilterPage } from "./pages/FilterPage/FilterPage.jsx"
 
 export function App() {
   return <div>
@@ -31,8 +33,10 @@ export function App() {
       <Routes>
         <Route index element={<HomePage />} />
         <Route path="counter" element={<CounterPage />} />
+        <Route path="comments" element={<CommentsPage />} />
         <Route path="jokes" element={<JokesPage />} />
         <Route path="video" element={<VideoPlayerPage />} />
+        <Route path="filter" element={<FilterPage />} />
       </Routes>
     </BrowserRouter>
   </div>

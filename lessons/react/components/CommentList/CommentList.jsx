@@ -1,4 +1,6 @@
-export function CommentList ({ comments }) {
+import { memo } from 'react'
+
+const CommentList = memo(({ comments }) => {
   return <div>
     <ul>
       <li>Yorum 1</li>
@@ -16,4 +18,6 @@ export function CommentList ({ comments }) {
       }
     </ul>
   </div>
-}
+})
+
+export { CommentList }

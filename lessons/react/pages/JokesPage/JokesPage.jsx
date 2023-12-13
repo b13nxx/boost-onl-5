@@ -1,4 +1,4 @@
-import { JokeList } from "../../components/JokeList/JokeList";
+import { JokeList } from "../../components/JokeList/JokeList.jsx";
 
 export function JokesPage () {
   return <div>

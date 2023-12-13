@@ -12,13 +12,16 @@ export function NavBar () {
         <a href="/counter">Counter</a>
       </li>
       <li>
+        <a href="/comments">Comments</a>
+      </li>
+      <li>
         <a href="/jokes">Jokes</a>
       </li>
       <li>
         <a href="/video">Video</a>
       </li>
       <li>
-        <SearchBar />
+        <a href="/filter">Filter</a>
       </li>
     </ul>
   </nav>
