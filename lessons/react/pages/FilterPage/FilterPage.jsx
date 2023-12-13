@@ -23,14 +23,14 @@ export function FilterPage () {
   }, [])
 
   const handleSearchInputValueChange = (event) => {
-    setSearchInputValue(event.target.value.trim())
+    setSearchInputValue(event.target.value)
   }
 
   const handleSearchButtonClick = () => {
-    if (searchInputValue.trim() !== '') {
-      setSearchQuery(searchInputValue)
-      setSearchInputValue('')
-    }
+    if (searchInputValue.trim() === '') return
+
+    setSearchQuery(searchInputValue)
+    setSearchInputValue('')
   }
 
   console.log('FilterPage componenti render ediliyor')

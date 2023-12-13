@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useCallback } from 'react'
 
 import { CommentBox } from '../CommentBox/CommentBox.jsx'
 import { CommentList } from '../CommentList/CommentList.jsx'
@@ -11,12 +11,12 @@ export function Comments () {
     setCounterValue(counterValue + 1)
   }
 
-  const handleAddComment = (text) => {
+  const handleAddComment = useCallback((commentText) => {
     setComments([
       ...comments,
-      text
+      commentText
     ])
-  }
+  }, [comments])
 
   return <div>
     <p>Counter value: {counterValue}</p>

@@ -2,7 +2,7 @@ import { useState, memo } from 'react'
 
 import styles from "./CommentBox.module.css"
 
-const CommentBox = memo(({ addComment }) => {
+export const CommentBox = memo(({ addComment }) => {
   const [commentText, setCommentText] = useState('')
 
   const handleTexteareaValueChange = (event) => {
@@ -10,15 +10,13 @@ const CommentBox = memo(({ addComment }) => {
   }
 
   const handleAddComment = () => {
+    if (commentText.trim() === '') return
+
     addComment(commentText)
   }
 
-  return <div>
-    <textarea id="mytexteare" onChange={handleTexteareaValueChange} value={commentText} />
-    <br />
-    <br />
+  return <div className={styles['comment-box']}>
+    <textarea className={styles['text-area']} onChange={handleTexteareaValueChange} value={commentText} />
     <button className={styles.button} onClick={handleAddComment}>Ekle</button>
   </div>
 })
-
-export { CommentBox }
