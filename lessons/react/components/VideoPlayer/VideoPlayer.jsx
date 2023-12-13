@@ -24,12 +24,12 @@ export function VideoPlayer () {
 
   return <div>
     <h1>Video Player</h1>
-    <div class={styles['video-wrapper']}>
-      <video ref={videoRef} nocontrols>
+    <div className={styles['video-wrapper']}>
+      <video ref={videoRef} controls={false}>
         <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <button class={styles['video-button']} onClick={handlePlayButtonClick}>{isPlaying ? "Durdur": "Başlat"}</button>
+      <button className={styles['video-button']} onClick={handlePlayButtonClick}>{isPlaying ? "Durdur": "Başlat"}</button>
     </div>
     <br />
     <br />

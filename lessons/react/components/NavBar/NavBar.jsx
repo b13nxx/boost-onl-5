@@ -1,3 +1,5 @@
+import { SearchBar } from "../SearchBar/SearchBar.jsx"
+
 import styles from "./NavBar.module.css"
 
 export function NavBar () {
@@ -14,6 +16,9 @@ export function NavBar () {
       </li>
       <li>
         <a href="/video">Video</a>
+      </li>
+      <li>
+        <SearchBar />
       </li>
     </ul>
   </nav>
