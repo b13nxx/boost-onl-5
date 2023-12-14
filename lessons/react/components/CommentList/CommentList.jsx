@@ -26,5 +26,5 @@ export const CommentList = memo(({ comments }) => {
         }
       </ul>
     </div>
-  );
-});
+  )
+})
