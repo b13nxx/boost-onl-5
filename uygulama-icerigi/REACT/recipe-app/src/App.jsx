@@ -55,12 +55,12 @@ function App() {
   }
 
   return (
-    <>
+    <div className="app">
       <Header />
       <Home />
       <NewRecipeForm addRecipeToList={addRecipeToList} isLoading={isLoading} />
-      <RecipeList recipes={recipes} deleteRecipe={deleteRecipe} />
-    </>
+      <RecipeList recipes={recipes} deleteRecipe={deleteRecipe} isLoading={isLoading}/>
+    </div>
   );
 }
 

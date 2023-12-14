@@ -29,28 +29,34 @@ const NewRecipeForm = ({addRecipeToList, isLoading}) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        value={title}
-        type="text"
-        placeholder="Recipe Title"
-        onChange={(event) => setTitle(event.target.value)}
-      />
-      {titleErr && <p>Recipe Title cannot be empty!</p>}
-      <textarea
-        value={description}
-        placeholder="Recipe Description"
-        onChange={(event) => setDescription(event.target.value)}
-      />
-      {descriptionErr && <p>Recipe Description cannot be empty!</p>}
-      <input
-        value={image}
-        type="text"
-        placeholder="Image URL"
-        onChange={(event) => setImage(event.target.value)}
-      />
-      {imageErr && <p>Image URL cannot be empty!</p>}
-      <button type="submit">{isLoading.add ? "Loading..." : "Add Recipe"}</button>
+    <form className="new-recipe-form" onSubmit={handleSubmit}>
+      <div className="form-control">
+        <input
+          value={title}
+          type="text"
+          placeholder="Recipe Title"
+          onChange={(event) => setTitle(event.target.value)}
+        />
+        {titleErr && <p className="input-err">Recipe Title cannot be empty!</p>}
+      </div>
+      <div className="form-control">
+        <textarea
+          value={description}
+          placeholder="Recipe Description"
+          onChange={(event) => setDescription(event.target.value)}
+        />
+        {descriptionErr && <p className="input-err">Recipe Description cannot be empty!</p>}
+      </div>
+      <div className="form-control">
+        <input
+          value={image}
+          type="text"
+          placeholder="Image URL"
+          onChange={(event) => setImage(event.target.value)}
+        />
+        {imageErr && <p className="input-err">Image URL cannot be empty!</p>}
+      </div>
+      <button className="btn-submit" type="submit">{isLoading.add ? "Loading..." : "Add Recipe"}</button>
     </form>
   );
 };

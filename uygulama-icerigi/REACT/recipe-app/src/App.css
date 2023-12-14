@@ -1,11 +1,122 @@
-.recipe-list{
-    width: 80%;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
+/* CSS RESET */
+/* 1rem ===> 16px */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
-.recipe-card {
-    flex-basis: 200px;
-    padding: 20px;
+/* HEADER SECTION */
+
+.header {
+    background-color: #333;
+    color: white;
+    padding: 2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.6rem;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li{
+    list-style: none;
+}
+.navbar ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* HOME SECTION */
+
+.home {
+    text-align: center;
+    padding: 2rem 3rem;
+}
+
+.home p{
+    font-size: 1.2rem;
+    margin-top: .5rem;
+}
+
+/* NEW RECIPE FORM SECTION */
+
+.new-recipe-form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+    gap: 1rem;
+}
+
+.new-recipe-form input,
+.new-recipe-form textarea{
+    font-size: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+}
+
+.btn-submit {
+    background-color: #333;
+    color: white;
+    padding: .5rem 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-submit:hover{
+    background-color: brown;
+}
+.new-recipe-form .input-err{
+    font-size: 12px;
+    font-weight: 700;
+    color: brown;
+    margin: 2px 0 0 4px;
+}
+
+/* RECIPE LIST SECTION */
+
+.recipe-list{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem 3rem;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.recipe-card{
+    border: 1px solid #ddd;
+    width: 300px;
+    padding: 1.2rem;
+    border-radius: 8px;
+}
+.recipe-image{
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.btn-delete{
+    margin: 0 auto;
+    background-color: #333;
+    color: white;
+    padding: .2rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: .6rem;
+}
+.btn-delete:hover{
+    background-color: brown;
 }
