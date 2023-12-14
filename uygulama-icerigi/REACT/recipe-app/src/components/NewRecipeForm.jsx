@@ -1,29 +1,31 @@
 import React, { useState } from "react";
-import axios from "axios";
 
-const NewRecipeForm = ({addRecipeToList}) => {
+const NewRecipeForm = ({addRecipeToList, isLoading}) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [image, setImage] = useState("");
 
-
-
+  const [titleErr, setTitleErr] = useState(false)
+  const [descriptionErr, setDescriptionErr] = useState(false)
+  const [imageErr, setImageErr] = useState(false)
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    axios
-      .post("http://localhost:3001/recipes", { title, description, image })
-      .then((response) => {
-        console.log(response.data);
-        addRecipeToList(response.data);
-      })
-      .catch((error) => {
-        console.error("There was an error posting the new recipe!", error);
-      });
 
-    setTitle("");
-    setDescription("")
-    setImage("")
+    if(title.trim() && description.trim() && image.trim()){
+      addRecipeToList(title,description,image)
+      setTitle("");
+      setDescription("")
+      setImage("")
+    } else {
+      !title.trim() && setTitleErr(true)
+      !description.trim() && setDescriptionErr(true)
+      !image.trim() && setImageErr(true)
+    }
+
+
+
+
   };
 
   return (
@@ -32,23 +34,23 @@ const NewRecipeForm = ({addRecipeToList}) => {
         value={title}
         type="text"
         placeholder="Recipe Title"
-        required
         onChange={(event) => setTitle(event.target.value)}
       />
+      {titleErr && <p>Recipe Title cannot be empty!</p>}
       <textarea
         value={description}
         placeholder="Recipe Description"
         onChange={(event) => setDescription(event.target.value)}
-        required
       />
+      {descriptionErr && <p>Recipe Description cannot be empty!</p>}
       <input
         value={image}
         type="text"
         placeholder="Image URL"
         onChange={(event) => setImage(event.target.value)}
-        required
       />
-      <button type="submit">Add Recipe</button>
+      {imageErr && <p>Image URL cannot be empty!</p>}
+      <button type="submit">{isLoading.add ? "Loading..." : "Add Recipe"}</button>
     </form>
   );
 };
