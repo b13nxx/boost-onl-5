@@ -10,7 +10,11 @@ export function FilterPage () {
   const filteredProducts = useMemo(() => {
     console.log('useMemo callback calisti')
 
-    return products.slice().filter((product) => product.title.toLowerCase().includes(searchQuery.toLowerCase()))
+    return searchQuery === ''
+      ? products
+      : products
+          .slice()
+          .filter((product) => product.title.toLowerCase().includes(searchQuery))
   }, [products, searchQuery])
 
   useEffect(() => {

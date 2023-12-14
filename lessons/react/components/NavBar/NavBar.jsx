@@ -1,5 +1,3 @@
-import { SearchBar } from "../SearchBar/SearchBar.jsx"
-
 import styles from "./NavBar.module.css"
 
 export function NavBar () {
