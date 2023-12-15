@@ -1,7 +1,16 @@
+import { useContext } from 'react'
+
 import styles from "./NavBar.module.css"
 
+import { AppContext } from '../../App.jsx'
+import { ToggleMode } from '../ToggleMode/ToggleMode.jsx'
+
 export function NavBar () {
-  return <nav className={styles.navbar}>
+  const { theme } = useContext(AppContext)
+
+  console.log('theme', theme)
+
+  return <nav className={styles.navbar + ' ' + (theme === 'dark' ? styles['dark-mode'] : '')}>
     <ul>
       <li>
         <a href="/">Home</a>
@@ -20,6 +29,9 @@ export function NavBar () {
       </li>
       <li>
         <a href="/filter">Filter</a>
+      </li>
+      <li>
+        <ToggleMode />
       </li>
     </ul>
   </nav>

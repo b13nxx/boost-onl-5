@@ -15,7 +15,7 @@ const person = {
 }
 const { surname } = person
 */
-
+import { createContext, useState } from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { NavBar } from "./components/NavBar/NavBar.jsx"
@@ -26,18 +26,24 @@ import { JokesPage } from "./pages/JokesPage/JokesPage.jsx"
 import { VideoPlayerPage } from "./pages/VideoPlayerPage/VideoPlayerPage.jsx"
 import { FilterPage } from "./pages/FilterPage/FilterPage.jsx"
 
+export const AppContext = createContext(null)
+
 export function App() {
+  const [theme, setTheme] = useState('light')
+
   return <div>
-    <NavBar />
-    <BrowserRouter>
-      <Routes>
-        <Route index element={<HomePage />} />
-        <Route path="counter" element={<CounterPage />} />
-        <Route path="comments" element={<CommentsPage />} />
-        <Route path="jokes" element={<JokesPage />} />
-        <Route path="video" element={<VideoPlayerPage />} />
-        <Route path="filter" element={<FilterPage />} />
-      </Routes>
-    </BrowserRouter>
+    <AppContext.Provider value={{ theme, setTheme }}>
+      <NavBar />
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<HomePage />} />
+          <Route path="counter" element={<CounterPage />} />
+          <Route path="comments" element={<CommentsPage />} />
+          <Route path="jokes" element={<JokesPage />} />
+          <Route path="video" element={<VideoPlayerPage />} />
+          <Route path="filter" element={<FilterPage />} />
+        </Routes>
+      </BrowserRouter>
+    </AppContext.Provider>
   </div>
 }

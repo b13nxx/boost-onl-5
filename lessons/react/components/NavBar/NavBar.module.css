@@ -10,11 +10,28 @@
   font-size: 24px;
 }
 
+.navbar > ul > li {
+  display: inline-flex;
+}
+
 .navbar > ul > li > a {
   padding: 10px;
   text-decoration: none;
 }
 
 .navbar > ul > li > a:hover {
-  border: 1px solid #000;
+  outline: 1px solid #000;
+}
+
+.dark-mode {
+  background-color: #000;
+}
+
+.dark-mode a {
+  color: #fff;
+}
+
+.dark-mode a:hover {
+  outline: 0 !important;
+  background-color: #95a5a6;
 }
