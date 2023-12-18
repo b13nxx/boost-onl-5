@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useContext } from "react";
+import { ApiContext } from "../context/ApiContext";
 
-const NewRecipeForm = ({addRecipeToList, isLoading}) => {
+const NewRecipeForm = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [image, setImage] = useState("");
@@ -8,6 +10,8 @@ const NewRecipeForm = ({addRecipeToList, isLoading}) => {
   const [titleErr, setTitleErr] = useState(false)
   const [descriptionErr, setDescriptionErr] = useState(false)
   const [imageErr, setImageErr] = useState(false)
+
+  const {addRecipeToList, isLoading} = useContext(ApiContext)
 
   const handleSubmit = (event) => {
     event.preventDefault();

@@ -1,5 +1,6 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { ThemeContex } from '../context/ThemeContex'
+import {Link} from 'react-router-dom'
 
 
 const ThemeSlider = () => {
@@ -26,9 +27,9 @@ const Header = () => {
       <div className='logo'>Recipe Platform</div>
       <nav className='navbar'>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Add Recipe</a></li>
-          <li><a href="#">About</a></li>
+          <li><Link to={"/"} >Home</Link> </li>
+          <li><Link to={"/add-recipe"} >Add Recipe</Link></li>
+          <li><Link to={"/recipes"}>Recipe List</Link></li>
           <ThemeSlider/>
         </ul>
         
