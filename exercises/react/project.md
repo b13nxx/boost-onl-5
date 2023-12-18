@@ -19,4 +19,4 @@ Mesela HomePage için _smartphones_ kategorisindeki ürünleri listeleyebilirsin
 
 ## SideBar
 
-![SideBar](https://github.com/b13nxx/boost-onl-5/assets/4191018/4a19fb0a-708e-4e0f-ab2c-57bb14e53960)
+![SideBar](https://github.com/b13nxx/boost-onl-5/assets/4191018/a368565c-8ee4-42a9-8d00-e4655990b77e)
