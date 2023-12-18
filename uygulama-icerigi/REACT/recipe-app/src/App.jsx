@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Home from "./components/Home";
@@ -6,6 +6,7 @@ import NewRecipeForm from "./components/NewRecipeForm";
 import RecipeList from "./components/RecipeList";
 import axios from "axios";
 import { useEffect } from "react";
+import { ThemeContex } from "./context/ThemeContex";
 
 function App() {
   const [recipes, setRecipes] = useState([]);
@@ -14,6 +15,8 @@ function App() {
     delete: false,
     add: false
   })
+
+  const {theme} = useContext(ThemeContex)
 
   useEffect(() => {
     const getRecipes = async () => {
@@ -55,7 +58,8 @@ function App() {
   }
 
   return (
-    <div className="app">
+    <div className={`app ${theme}`}>
+      
       <Header />
       <Home />
       <NewRecipeForm addRecipeToList={addRecipeToList} isLoading={isLoading} />
