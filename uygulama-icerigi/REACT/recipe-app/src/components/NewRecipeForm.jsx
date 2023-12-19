@@ -24,7 +24,7 @@ const NewRecipeForm = () => {
     } else {
       !title.trim() && setTitleErr(true)
       !description.trim() && setDescriptionErr(true)
-      !image.trim() && setImageErr(true)
+      setImageErr(!image.trim())
     }
 
 

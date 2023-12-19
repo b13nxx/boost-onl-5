@@ -29,7 +29,7 @@ const Header = () => {
         <ul>
           <li><Link to={"/"} >Home</Link> </li>
           <li><Link to={"/add-recipe"} >Add Recipe</Link></li>
-          <li><Link to={"/recipes"}>Recipe List</Link></li>
+          <li><Link to={"/login"}>Login</Link></li>
           <ThemeSlider/>
         </ul>
         
