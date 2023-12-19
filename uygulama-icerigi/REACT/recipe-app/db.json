@@ -1,12 +1,6 @@
 {
   "recipes": [
     {
-      "id": 8,
-      "title": "Fish Tacos",
-      "description": "Lightly battered fish served on a soft tortilla with shredded cabbage, a zesty white sauce, and a squeeze of fresh lime.",
-      "image": "https://therealkitchen.com/wp-content/uploads/2023/02/bangbangfishtaco-300x300.jpeg"
-    },
-    {
       "id": 9,
       "title": "Mushroom Risotto",
       "description": "A creamy Italian rice dish cooked with a variety of mushrooms and parmesan cheese.",
@@ -17,6 +11,12 @@
       "title": "Pumpkin Soup",
       "description": "A creamy, seasonal soup made with pureed pumpkin and a blend of warm spices.",
       "image": "https://adventuresincooking.com/wp-content/uploads/2010/10/Pumpkin-Soup-by-Eva-Kosmas-Flores-300x300.jpg"
+    },
+    {
+      "title": "cem",
+      "description": "mert",
+      "image": "şimşek",
+      "id": 11
     }
   ]
 }
