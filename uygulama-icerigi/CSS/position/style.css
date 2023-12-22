@@ -1,0 +1,68 @@
+*{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 3000px;
+    height: 3000px;
+}
+
+.wrapper{
+    border: 5px solid darkblue;
+    width: 800px;
+    height: 800px;
+}
+
+.container{
+    width: 300px;
+    height: 300px;
+    border: 2px solid brown;
+    background-color: rgba(255, 0, 0, 0.293);
+    position: relative;
+}
+
+.box{
+    border: 2px solid gray;
+    width: 100px;
+    height: 100px;
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+}
+
+ #box-1{
+    background-color: pink;
+    position: relative;
+    left: 250px;
+    top: 80px;
+    z-index: 9;
+ }
+#box-2{
+    background-color: rgba(0, 255, 255, 0.206);
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    z-index: 5;
+}
+#box-3{
+    background-color: yellow;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    z-index: 3;
+}
+#box-4 {
+    background-color: blue;
+    position: fixed;
+    top: 0;
+    left: 50px;
+}
+#box-5 {
+    background-color: green;
+    position: sticky;
+    left: 200px;
+    top: 300px;
+    /* mevcut kapsayıcısının dışına çıkmaz */
+}

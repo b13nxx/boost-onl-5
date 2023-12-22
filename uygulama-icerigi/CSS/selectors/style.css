@@ -1,0 +1,72 @@
+/* *{
+  margin: 0;  
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+/* tag selectors */
+p{
+    color: red;
+}
+
+/* class selectors */
+.paragraph {
+    color: black;
+}
+
+/* id selectors */
+#third {
+    color: blue;
+}
+
+/* all children */
+main ul{
+    background-color: aquamarine;
+}
+
+/* direct child */
+
+main>ul{
+    background-color: blueviolet;
+}
+
+main>h2{
+    background-color: pink;
+}
+
+section>h2{
+    color: cornflowerblue;
+}
+
+/* psuedoselectors */
+a:hover{
+    background-color: red;
+}
+a:active{
+    background-color: yellow;
+}
+
+/* unvisited */
+a:link{
+    color: green;
+}
+a:visited{
+    color: limegreen;
+}
+
+ol>li:first-child{
+    color: blue;
+}
+ol>li:last-child{
+    color: red;
+}
+
+section ol>li:nth-child(2n+1){
+    background-color: deeppink;
+}
+section ol>li:nth-child(2n){
+    background-color: gray;
+}
+.last p:last-child{
+    background-color: blue;
+}
